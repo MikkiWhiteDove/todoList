@@ -8,7 +8,8 @@ import  './sidebarMod.scss';
 
 const Sidebar = ({
     items,
-    activeItem
+    activeItem,
+    setIsActiveItem,
 }) => {
 
 
@@ -39,15 +40,17 @@ const {Content} = Layout;
                     left: 0,
                     background: '#fafafa',
                     padding: '0 25px',
-                }}                   
+                }}
             >
                 <Menu >
                     {lists ? (
                         <List
                         items={lists}
+                        onClick={() => setIsActiveItem(true)}
                         onRemove={id=> {
                             const newLists = lists.filter(item => item.id !== id);
                             setLists(newLists);
+                            setIsActiveItem(false);
                         }}
                         activeItem={activeItem}
                         isRemovable
