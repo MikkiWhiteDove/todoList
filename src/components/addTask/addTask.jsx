@@ -6,7 +6,7 @@ import axios from 'axios';
 
 // import "response-datepicker / dist / response-datepicker.css"
 
-import  './taskMod.scss';
+import styles from './addTask.module.scss';
 
 const AddTask = ({ item, list, onAddTask}) => {
     const [inputValue, setInputValue] = useState('');
@@ -16,7 +16,7 @@ const AddTask = ({ item, list, onAddTask}) => {
     function disabledDate(current) {
         let d = new Date();
         d.setDate(d.getDate() - 1);
-        return current && current <= moment(d, "DD-MM-YYYY");
+        return current && current <= moment(d, "DD.MM.YYYY");
     }
 
     // function defaultDate(current) {
@@ -57,8 +57,8 @@ const AddTask = ({ item, list, onAddTask}) => {
     }
 
     return (
-        <div className="tasks__add_form">
-            <div className="tasks__add-input">
+        <div className={styles.addTask}>
+            <div className={styles.taskInput}>
                 <Input 
                     value={inputValue}
                     type="text"
@@ -66,16 +66,17 @@ const AddTask = ({ item, list, onAddTask}) => {
                     onChange={t => setInputValue(t.target.value)}
                 />
             </div>
-            <div className="tasks__add-date">
+            <div className={styles.datePiker}>
                 <DatePicker
-                    format="DD-MM-YYYY"
+                    format="DD.MM.YYYY"
                     type="text"
-                    disabledDate={disabledDate}
-                    value={inputValueDate}
-                    onChange={d => setInputValueDate(d.target.value)}
+                    // disableDate={disabledDate}
+                    value={disabledDate}
+                    // placeholder={disableDate }
+                    onChange={d => setInputValueDate(d.value)}
                 />
             </div>
-            <div className="tasks__add-btn">
+            <div className={styles.btnAdd}>
                 <Button
                     onClick={AddTask}
                     type="primary"
