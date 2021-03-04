@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TaskItem }from '../index';
+import { TaskItem } from '../index';
 // import { completeTask } from '../../actions/actionCreator';
 
 const TaskList = ({ tasksList, removeTask, completeTask }) => (

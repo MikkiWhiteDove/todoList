@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { DatePicker, Input, Button } from 'antd';
-// import { PoweroffOutlined } from '@ant-design/icons';       
+// import { PoweroffOutlined } from '@ant-design/icons';
 import moment from "moment";
 
 
 import styles from './style.module.scss';
-import TaskItem from '../TaskItem';
+import TaskItem from '../taskItem';
 
 
 
@@ -23,12 +23,12 @@ const TaskAdd = ({ value, onChange }) => {
         return (
             <div className={styles.taskAdd}>
             <div className={styles.taskInput}>
-                <Input 
+                <Input
 
                     type="text"
                     placeholder="Текст задачи"
                     onChange={onChange}
-                    value={value} 
+                    value={value}
                     // onKeyPress={onKeyPress}
                 />
             </div>

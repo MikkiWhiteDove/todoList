@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Layout } from 'antd';
-// import axios from 'axios';
 
-
-
-import { TaskAdd, TaskList } from '../../components/index';
-
+import { TaskAdd, TaskList } from '../../components';
 
 const Home = () => {
     const { Header, Footer, Content } = Layout;
@@ -19,13 +15,13 @@ const Home = () => {
         this.setState({
           taskText: value,
         })
-    }
+    };
 
         return (
             <div>
                 <Layout style={{ padding: 24, textAlign: 'center', height: '100vh'}}>
                     <Header ><h1 style={{ color:'white' }}>Список задач {tasks.length}</h1></Header>
-                    <Content 
+                    <Content
                         className="site-layout-background"
                         style={{
                           margin: '24px 16px',
@@ -37,7 +33,7 @@ const Home = () => {
                         {isTasksExist && <TaskList tasksList={tasks} />}
                     </Content>
                 </Layout>
-               
+
             </div>
         )
 };

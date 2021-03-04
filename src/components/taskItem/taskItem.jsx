@@ -13,7 +13,7 @@ const TaskItem = ({ id, text, date, isCompleted, removeTask, completeTask }) => 
             <div className={styles.switch}>
             <Checkbox  onChange={isCompleted ? 'checked' : 'unchecked'}/>
            </div>
-            <div className={styles.input}> 
+            <div className={styles.input}>
                 <Input value={text} readOnly />
             </div>
             <div className={styles.datePickerer}>
@@ -24,7 +24,7 @@ const TaskItem = ({ id, text, date, isCompleted, removeTask, completeTask }) => 
             </div>
             <div className={styles.btnDelete} >
                     <Button><DeleteFilled /></Button>
-            </div> 
+            </div>
     </div>
         )
 };
@@ -35,7 +35,7 @@ TaskItem.propTypes = {
     isCompleted: PropTypes.bool,
     removeTasks: PropTypes.func,
     id: PropTypes.string,
-}
+};
 
 TaskItem.defaultProps = {
     text: '',
@@ -44,6 +44,6 @@ TaskItem.defaultProps = {
     removeTasks: () => {},
     id: '',
 
-}
+};
 
 export default TaskItem;
