@@ -1,161 +1,100 @@
 {
   "lists": [
     {
-      "name": "123",
-      "id": 1
-    },
-    {
-      "name": "123",
-      "id": 2
-    },
-    {
-      "name": "123",
-      "id": 3
-    },
-    {
-      "name": "123",
-      "id": 5
-    },
-    {
-      "name": "123",
-      "id": 6
-    },
-    {
-      "name": "123",
-      "id": 8
-    },
-    {
-      "name": "123",
-      "id": 9
-    },
-    {
-      "name": "1234",
-      "id": 10
-    },
-    {
-      "name": "123",
-      "id": 11
-    }
-  ],
-  "tasks": [
-    {
-      "listId": 1,
+      "id": 1,
       "text": "zhj",
       "date": "02.02.2021",
-      "completed": true,
-      "id": 1
+      "completed": true
     },
     {
-      "listId": 1,
-      "text": "dxfcgvh",
+      "id": 2,
+      "text": "123456789",
       "date": "02.02.2021",
-      "completed": true,
-      "id": 2
+      "completed": true
     },
     {
-      "listId": 2,
+      "id": 3,
       "text": "ствлоимл",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 3
+      "completed": false
     },
     {
-      "listId": 3,
+      "id": 4,
       "text": "сляслсо",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 4
+      "completed": false
     },
     {
-      "listId": 6,
+      "id": 7,
       "text": "gigl",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 7
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 8,
       "text": "akfjna;kvjv;a;jndv;sdk",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 8
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 9,
       "text": "skdjvnsdkjvns;jk",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 9
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 10,
       "text": "dvsdkvjn;kvadja",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 10
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 11,
       "text": "dvfs",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 11
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 12,
       "text": "vfvsgdef",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 12
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 13,
       "text": "svfdvsf",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 13
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 14,
       "text": "w,ef;fs;e",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 14
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 15,
       "text": "gresgdfb",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 15
+      "completed": false
     },
     {
-      "listId": 1,
-      "text": "xgsfed",
-      "date": "02.02.2021",
-      "completed": false,
-      "id": 16
-    },
-    {
-      "listId": 1,
+      "id": 17,
       "text": "ggsdffdfvfd",
       "date": "02.02.2021",
-      "completed": false,
-      "id": 17
+      "completed": false
     },
     {
-      "listId": 1,
+      "id": 18,
       "text": "livoisadp",
       "date": "02.02.2021",
-      "completed": true,
-      "id": 18
+      "completed": true
     },
     {
-      "listId": 3,
+      "id": 20,
       "text": "dsjbg;so",
       "date": "02.02.2021",
-      "completed": true,
-      "id": 20
+      "completed": true
     }
   ]
 }

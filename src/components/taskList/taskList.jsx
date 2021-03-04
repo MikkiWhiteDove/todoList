@@ -1,79 +1,36 @@
-import React, {useEffect, useState, useCallback} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { List } from 'antd/lib/form/Form';
-import { Button, Layout } from 'antd';
-import { EditFilled } from '@ant-design/icons';
-import axios from 'axios';
+import { TaskItem }from '../index';
+// import { completeTask } from '../../actions/actionCreator';
 
-import TasksService from '../../services/taskService';
-import { TaskItem, AddTask } from '../index'
+const TaskList = ({ tasksList, removeTask, completeTask }) => (
+    <div>
+      {tasksList.map(({ id, text, date, isCompleted}) => (
+        <TaskItem
+          id={id}
+          key={id}
+          text={text}
+          date={date}
+          isCompleted={isCompleted}
+          // removeTask={removeTask}
+          // completeTask={completeTask}
+          />
+      ))}
+    </div>
+);
 
 
-const { Header, PageHeader, Content, Footer } = Layout;
+TaskList.propTypes = {
+  tasksList: PropTypes.array,
+  // removeTask: PropTypes.func,
+  // completeTask: completeTask.func,
+};
 
-
-const TaskList = () => {
-    const [loading, setLoading] = useState(true);
-    const [items, setItems] = useState([]);
-
-    useEffect(async () => {
-        const data = await TasksService.getList();
-        setLoading(false);
-        setItems(data);
-      }, []);
-
-    // const removeItem = useCallback((itemId) => {
-    //     const newItems = items.filter(item => item.id !== itemId).concat();
-    //     setItems(newItems);
-    // }, [setItems]);
-
-    return (
-        <div className="todo__tasks">
-                <Header
-                    style={{
-                        background: '#d9d9d9',
-                        height: '10vw',
-                    }}
-                >
-                    <div className="todo__tasks_header">
-                        {/* <PageHeader
-                            style={{
-                                background: '#ffffff',
-                            }}
-                            title="Title"
-                            extra={[
-                                    <Button
-                                        danger
-                                        type="primary"
-                                        // onClick={editTitle}
-                                    >
-                                        <EditFilled />
-                                    </Button>,
-                                ]}
-                        /> */}
-                    </div>
-                </Header>
-                <div className="todo__tasks_content">
-                    
-                            <Content 
-                                style={{
-                                    overflow: 'auto',
-                                    padding: '10px 50px',
-                                }}
-                            >
-                                <div className="lol">
-                                {loading && <span>Загружаем данные</span>}
-                                </div>
-                                {!loading && items.map((item, index) => <TaskItem key={index} {...item}/>)}
-                                {/* {items.map(item =>  <TaskItem id={item.id} key={item.id} task={item} onRemoveItem={removeItem} />)} */}
-                                {/*isActiveItem: {+isActiveItem}*/}
-                            </Content>
-                    <Footer>
-                        <AddTask />
-                    </Footer>
-                </div>
-        </div>
-    );
+TaskList.defaultProps = {
+  tasksList: [],
+  // removeTask: () => {},
+  // completeTask: () => {},
 };
 
 export default TaskList;

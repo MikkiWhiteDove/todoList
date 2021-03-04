@@ -1,0 +1,14 @@
+.taskAdd {
+    margin: 30px, 50px;
+    display: flex;
+    justify-content: space-around;
+    .taskInput {
+        flex-grow: 1000;
+    }
+    .datePicker{
+        flex-grow: 3;
+    }
+    .btnAdd {
+        flex-grow: 1;
+    }
+}
