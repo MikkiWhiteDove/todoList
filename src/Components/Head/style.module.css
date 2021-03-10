@@ -1,0 +1,8 @@
+.header {
+	color: white;
+	margin-bottom: 15px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

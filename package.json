@@ -1,39 +1,30 @@
 {
-  "name": "fastlist",
+  "name": "todolist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "antd": "^4.13.0",
-    "axios": "^0.21.1",
+    "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.13.1",
+    "chai": "^4.2.0",
     "classnames": "^2.2.6",
-    "exppress": "^0.0.1-security",
-    "json-server": "^0.16.3",
-    "node-sass": "4.14.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-redux": "^7.2.2",
-    "react-scripts": "4.0.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-scripts": "3.4.3",
     "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
-    "web-vitals": "^1.0.1"
+    "sinon-chai": "^3.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fake-json": "json-server ./src/fixtures/db.json --watch --port 3009"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -46,5 +37,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.20.6",
+    "redux-mock-store": "^1.5.4"
   }
 }

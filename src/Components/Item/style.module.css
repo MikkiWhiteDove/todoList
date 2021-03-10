@@ -1,0 +1,6 @@
+.todoItemCompleted {
+	font-size: 15px;
+	font-style: italic;
+	color: #cdcdcd;
+	text-decoration: line-through;
+}
